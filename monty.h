@@ -9,6 +9,8 @@
 #include <string.h>
 #include <sys/types.h>
 
+#define MAXIMUM_LINE_LENGTH 1024
+
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
  * @n: integer
@@ -39,6 +41,7 @@ char *opcode;
 void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
+/*Declaration of functions*/
 int is_integer(const char *str);
 int main(int argc, char *argv[]);
 void pop(stack_t **stack, unsigned int line_number);
