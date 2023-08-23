@@ -28,7 +28,8 @@ if (*stack)
 }
 
 /**
- * pall- Prints all the values on the stack, starting from the top of the stack.
+ * pall- Prints all the values on the stack,
+ * starting from the top of the stack.
  * @stack: The linear data structure.
  * @line_number: The line number.
  *
