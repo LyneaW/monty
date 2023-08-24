@@ -9,7 +9,10 @@
 #include <string.h>
 #include <sys/types.h>
 
-#define MAXIMUM_LINE_LENGTH 1024
+#define MAXIMUM_LENGTH_OF_LINE 1024
+#define USAGE "USAGE: monty file\n"
+#define ERROR_OPEN "Error: Can't open file %s\n"
+#define ERROR_UNKNOWN "L%u: unknown instruction %s\n"
 
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
@@ -50,4 +53,9 @@ void push(stack_t **stack, unsigned int line_number, int value);
 void swap(stack_t **stack, unsigned int line_number);
 void pall(stack_t **stack, unsigned int line_number);
 void add(stack_t **stack, unsigned int line_number);
+int empty_stack(stack_t *stack);
+void stacks(stack_t **stack);
+void handles_opcodes(char *opcode, char *arg, stack_t **stack, unsigned int line_number);
+void check_for_arguments(int argc);
+FILE *open_file(const char *path_of_file);
 #endif /* MONTY_H */
