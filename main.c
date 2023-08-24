@@ -6,7 +6,7 @@
  */
 int empty_stack(stack_t *stack)
 {
-return stack == NULL;
+return (stack == NULL);
 }
 
 /**
@@ -64,7 +64,7 @@ FILE *open_file(const char *path_of_file)
 FILE *file = fopen(path_of_file, "r");
 if (!file)
 {
-fprintf(stderr, "Error: Can't open file %s\n",path_of_file);
+fprintf(stderr, "Error: Can't open file %s\n", path_of_file);
 exit(EXIT_FAILURE);
 }
 return (file);
@@ -75,7 +75,7 @@ return (file);
  * @argc: Argument count.
  * Return: Void.
  */
-void checks_for_arguments(int argc)
+void check_for_arguments(int argc)
 {
 if (argc != 2)
 {
